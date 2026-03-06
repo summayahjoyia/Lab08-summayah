@@ -21,3 +21,12 @@ public class CustomList {
         return cities.contains(city);
     }
 }
+
+@Test
+public void testDeleteCity() {
+    CustomList list = new CustomList();
+    City calgary = new City("Calgary", "AB");
+    list.addCity(calgary);
+    list.deleteCity(calgary);
+    assertFalse(list.hasCity(calgary));
+}
