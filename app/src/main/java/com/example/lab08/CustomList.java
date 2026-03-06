@@ -20,13 +20,9 @@ public class CustomList {
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
+    public void deleteCity(City city) {
+        cities.remove(city);
+    }
 }
 
-@Test
-public void testDeleteCity() {
-    CustomList list = new CustomList();
-    City calgary = new City("Calgary", "AB");
-    list.addCity(calgary);
-    list.deleteCity(calgary);
-    assertFalse(list.hasCity(calgary));
-}
+
